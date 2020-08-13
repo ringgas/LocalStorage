@@ -1,54 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
+  
 
 <link rel="stylesheet" href="style.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Local Storage</title>
+  <title>Calculator JavaScript</title>
 </head>
-<body onload="generateData()">
-    <div class="container">
-        <br>
-        <nav class="navbar navbar-expand navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">Web Storage</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-      
-            <div class="collapse navbar-collapse" id="navbarsExample02">
-              <ul class="navbar-nav mr-auto">
-                <li class="nav-item active" style="padding-left: 300px;">
-                  <a class="nav-link" href="index.html">PRODUCT <span class="sr-only">(current)</span></a>
-                </li>
-
-                <li class="nav-item active" style="padding-left: 100px;">
-                    <a class="nav-link" href="card.html">CART <span class="sr-only">(current)</span></a>
-                  </li>
-               
-              </ul>
-             
-            </div>
-          </nav>
-        <br>  <p class="text-center"><h5 class="text-center">HALAMAN PRODUCTS</h5></p>
-        <hr>
-        <div id="container"></div>
-        
-        
-       
-        </div> <!-- card.// -->
-        
-        </div> 
-        <!--container end.//-->
-        
-        </article>
- 
+<body >
+  <div class="container">
+		<form name="form">
+		<div class="display">
+      <input type="text" name="Input" id="textbox" class="textbox" readonly>
+		</div>
+		<div class="buttons">
+	  <div class="row">
+		<input type="button" class="button" id="7" value="7" >
+	  <input type="button" class="button" id="8" value="8" >
+	  <input type="button" class="button" id="9" value="9" >
+    <input type="button"  value="+" id="plus">
     
-  >
+		</div>
+		
+		<div class="row">
+		<input type="button" class="button" id="4" value="4" >
+	  <input type="button" class="button" id="5" value="5" >
+	  <input type="button" class="button" id="6" value="6" >
+	  <input type="button" class="button" id="-" value="-" >
+		</div>
+		
+		<div class="row">
+		<input type="button" class="button" id="1" value="1" >
+	  <input type="button" class="button" id="2" value="2" >
+	  <input type="button" class="button" id="3" value="3" >
+	  <input type="button" class="button" id="multiply" value="*">
+		</div>
+		
+		<div class="row">
+		<input type="button" class="button" id="0" value="0">
+	  <input type="button"  value="C" id="clear" >
+	  <input type="button" id="divide" value="/" >
+	  <input type="button" class="red" value="=" id="equals">
+		</div>
+		</div>
+		
+		</form>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="index.js"></script>
 </body>
 </html>

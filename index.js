@@ -1,85 +1,72 @@
-// Declare default data product
-let data = [
-    {
-      name: "Gaming Mouse",
-      price: 1000000,
-      id: 1,
-    },
-    {
-      name: "Keyboard Mechanic",
-      price: 2000000,
-      id: 2,
-    },
-  
-  ];
-  
-  // Menampung data Cart
-  let cart = [];
-  
-  
-  // Generate data for view default product in product page
-  function generateData() {
-    let result = '';
-  
-    for (let i = 0; i<data.length; i++) {
-      result += `<div class="card">
-      <table class="table table-hover shopping-cart-wrap">
-      <thead class="text-muted">
-      <tr>
-        <th scope="col">Product</th>
-  
-        <th scope="col" width="120">Price</th>
-        <th scope="col" width="200" class="text-right">Action</th>
-      </tr>
-      </thead>
-      <tbody>
-
-
-       <tr>
-	     <td>
-       <figure class="media">
-       <figcaption class="media-body">
-		<h5 id="productName"  class="title text-truncate">${data[i].name} </h5>
-		
-	
-	        </figcaption>
-      </figure> 
-	</td>
-
-    <td> 
-    <div class="price-wrap"> 
-        <var id="price" class="price">IDR ${data[i].price}</var> 
-        
-    </div> <!-- price-wrap .// -->
-</td>
-<td class="text-right"> 
-<button type="submit" onclick="addCart(${data[i].id})" class="btn btn-outline-success btn-round">Add to cart</button>
-
-</td>
-</tr>
+$(document).ready(function() {
+  $("#1").click(function() {
+    document.getElementById("textbox").value += '1';
+  });
     
-      </tbody>
-</table>
-</div> <!-- card.// -->
+  $("#2").click(function() {
+    document.getElementById("textbox").value += '2';
+  });
+    
+  $("#3").click(function() {
+    document.getElementById("textbox").value += '3';
+  });
+    
+  $("#4").click(function() {
+    document.getElementById("textbox").value += '4';
+  });  
 
-</div> 
-<!--container end.//-->
-
-</article>
-<br>
-      `;
-    }
-  
-    document.getElementById('container').innerHTML = result;
-  
-    return result;
-  }
-  
-  // addCart for push product data to Cart
-  function addCart(id) {
-    let result = data.find(element => element.id === id);
-  
-    cart.push(result); // Push ke array
-  
-    localStorage.setItem('productsInCart', JSON.stringify(cart)); // Set local storage
-  }
+  $("#5").click(function() {
+    document.getElementById("textbox").value += '5';
+  }); 
+    
+  $("#6").click(function() {
+    document.getElementById("textbox").value += '6';
+  }); 
+    
+  $("#7").click(function() {
+    document.getElementById("textbox").value += '7';
+  }); 
+    
+  $("#8").click(function() {
+    document.getElementById("textbox").value += '8';
+  }); 
+    
+  $("#9").click(function() {
+    document.getElementById("textbox").value += '9';
+  }); 
+    
+  $("#0").click(function() {  document.getElementById("textbox").value += '0';
+  }); 
+    
+  $("#dot").click(function() {  document.getElementById("textbox").value += '.';
+  });
+    
+    
+  $("#plus").click(function() {
+    document.getElementById("textbox").value += ' + ';
+  });
+    
+  $("#minus").click(function() {
+    document.getElementById("textbox").value += ' - ';
+  });
+    
+  $("#multiply").click(function() {
+    document.getElementById("textbox").value += ' * ';
+  });
+    
+  $("#divide").click(function() {
+    document.getElementById("textbox").value += ' / ';
+  });
+    
+  $("#modulus").click(function() {
+    document.getElementById("textbox").value += ' % ';
+  });
+    
+  $("#equals").click(function() {
+    document.getElementById("textbox").value =  eval(document.getElementById("textbox").value);
+  });  
+    
+  $("#clear").click(function() {
+    document.getElementById("textbox").value =  '';
+  });   
+});
